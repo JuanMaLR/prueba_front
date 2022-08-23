@@ -14,11 +14,13 @@ class App extends React.Component {
 
   submit(){
     //API call to recieve data
-    endpoint_url = 'http://' + process.env.REACT_NATIVE_PACKAGER_HOSTNAME + ':3000/api/v2/formulario'
-    console.log("Llegué aquí con el url: " + endpoint_url)
+    endpoint_url = 'http://' + process.env.REACT_NATIVE_PACKAGER_HOSTNAME + ':3000/api/v2/formulario';
+    console.log("Llegué aquí con el url: " + endpoint_url);
     fetch(endpoint_url)
     .then(response => response.json())
-    .then(information => console.log(information.data))
+    .then(information => {
+      console.log(information.data);
+    })
     .catch((e) => {
       console.log(e);
     });
