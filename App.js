@@ -14,7 +14,7 @@ class App extends React.Component {
 
   submit(){
     //API call to recieve data
-    console.log("Llegué aquí")
+    console.log("Llegué aquí con el hostname: " + url)
     fetch('http://' + url + ':3000/api/v2/formulario')
     .then((response) => response.json())
     .then((data) => console.log(data))
