@@ -18,9 +18,7 @@ class App extends React.Component {
     console.log("Llegué aquí con el url: " + endpoint_url);
     fetch(endpoint_url)
     .then(response => response.json())
-    .then(information => {
-      console.log(information.data);
-    })
+    .then(information => console.log(information))
     .catch((e) => {
       console.log(e);
     });
