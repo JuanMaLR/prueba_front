@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, Button, TextInput } from 'react-native';
-
+import 'dotenv/config';
 class App extends React.Component {
   constructor(){
     super();
@@ -15,7 +15,7 @@ class App extends React.Component {
   submit(){
     //API call to recieve data
     console.log("Llegué aquí")
-    fetch('http://10.25.94.215:3000/api/v2/formulario')
+    fetch('http://' + process.url + ':3000/api/v2/formulario')
     .then((response) => response.json())
     .then((data) => console.log(data))
     .catch((e) => {
