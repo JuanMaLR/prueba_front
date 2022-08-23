@@ -17,8 +17,8 @@ class App extends React.Component {
     endpoint_url = 'http://' + process.env.REACT_NATIVE_PACKAGER_HOSTNAME + ':3000/api/v2/formulario'
     console.log("Llegué aquí con el url: " + endpoint_url)
     fetch(endpoint_url)
-    .then((response) => response.json())
-    .then((data) => console.log(data))
+    .then(response => response.json())
+    .then(data => console.log(data))
     .catch((e) => {
       console.log(e);
     });
