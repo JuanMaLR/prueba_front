@@ -25,7 +25,7 @@ class App extends React.Component {
   }
 
   render(){
-    return( 
+    return(
     <SafeAreaView style={styles.container}>
       <TextInput placeholder = 'Enter name'
       onChangeText = {(text) => {this.setState({name: text})}}
