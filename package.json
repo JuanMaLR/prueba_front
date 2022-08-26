@@ -9,6 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
+    "babel-plugin-transform-inline-environment-variables": "^0.4.4",
     "dotenv": "^16.0.1",
     "expo": "~46.0.8",
     "expo-status-bar": "~1.4.0",

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, SafeAreaView, Button, TextInput } from 'react-native';
-import {} from "@env";
+//import {} from "@env";
 class App extends React.Component {
   constructor(){
     super();
@@ -14,7 +14,7 @@ class App extends React.Component {
 
   submit(){
     //API call to recieve data
-    endpoint_url = 'http://' + process.env.REACT_APP_IP_ADDRESS + ':8080/api/v2/formulario';
+    endpoint_url = 'http://' + process.env['REACT_NATIVE_PACKAGER_HOSTNAME'] + ':8080/api/v2/formulario';
     console.log("Llegué aquí con el url: " + endpoint_url);
     fetch(endpoint_url)
     .then(response => response.json())
